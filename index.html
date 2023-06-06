@@ -82,46 +82,7 @@
                 
             }
         }
-        .dev{
-            width: 70vw;
-            height: 60vh;
-            background-color: black;
-            margin: 20vh 10vw 20vh 15vw;
-            position: absolute;
-            z-index: 1;
-            display: flex;
-            align-items: center;
-            visibility: hidden;
-        }
-        .dev img{
-            height: calc(10vh + 10vw);
-            width: calc(10vh + 10vw);
-            border-radius: 50% 50%;
-            margin: auto;
-            padding: 10px;
-        }
-        #but{
-            color: white;
-            position: absolute;
-            margin: 95vh 45vw 0vh 45vw;
-            text-align: center;
-            width: calc(4vh + 4vw);
-            border: 2px solid blue;
-            padding: 1vw;
-            border-radius: 12px;
-            background-color: black;
-            visibility: hidden;
-            z-index: 1;
-        }
 
-        @media  screen and (max-width: 600px) {
-    .dev{
-        display: block;
-    }
-    .dev img{
-        display: block;
-    }
-}
     </style>
 </head>
 <body>
@@ -130,32 +91,18 @@
 <div class="mask">
     <ul><li id="al"><a href="#">Points table</a></li>
     <li><a href="enter.html" target="_blank">Enter</a></li>
-<li><a href="#"  onclick="dev()">Developers</a></li></ul>
+<li><a href="developers.html" target="_blank" >Developers</a></li></ul>
 </div>
-<div class="dev" id="dev"> 
-    <img src="fresh1.jpg" alt="">
-    <img src="aaryan.jpg" alt="">
-    
-</div><div id="but" onclick="clo()">Back</div>
+
    <script>
     let a= document.getElementById("al");
     al.onclick=function (){
         alert("Event not yet started!!!")
     }
 
-    dev = () =>{
-        var b=document.getElementById("but");
-        var c=document.getElementById("dev");
-        b.style.visibility = "visible";
-        c.style.visibility = "visible";
-    }
 
-    clo = () =>{
-        var b=document.getElementById("but");
-        var c=document.getElementById("dev");
-        b.style.visibility = "hidden";
-        c.style.visibility = "hidden";
-    }
+
+    
    </script> 
 </body>
 </html>
