@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entry</title>
+    <style>
+        body{
+            
+        }
+        .ba{
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            background-image: url("chess2.png");
+            background-size: cover;
+        }
+        .ce{
+            width: 80vw;
+            height: 60vh;
+            margin:20vh auto;
+            display: flex;
+            background-color: black;
+        }
+        form{
+            margin: auto;
+            text-align: center;
+        }
+        input{
+           border-radius: 10px;
+           color: rgb(0, 0, 0);
+           font-weight: bolder;
+           text-align: center;
+        }
+        label{
+            color: white;
+            font-family: cursive;
+        }
+        #rule{
+             width: 80vw;
+             height: 70vh;
+             position: absolute;
+             margin: 10vh 10vw 10vh 10vw;
+             background-color: black;
+             color: white;
+             font-weight: bold;
+             font-size: calc(1vh + 1vw);
+             display: block;
+             
+        }
+        #rule input{
+            text-align: center;
+        
+        }
+        #time{
+          color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="ba">
+    <div class="ce"><form action="https://sheetdb.io/api/v1/cvqh96ihuokyb" method="post" required>
+        <label for="name">NAME</label>
+        <input type="text" name="name" id="name" required>
+        <br><br>
+        <label for="usn">USN</label>
+        <input type="text" name="usn" id="usn" required>
+        <br><br>
+        <label for="email">Email-ID</label>
+        <input type="email" name="email" id="email" required>
+        <br><br>
+        <label for="number">Mobile</label>
+        <input type="text" name="number" id="number" minlength="10" required>
+        <br><br>
+        <input type="text" name="time" id="time" readonly>
+        <br><br>
+        <input type="submit" value="Submit" onclick="home()">
+        
+        <label for=""></label>
+        <input type="reset" value="Reset">
+
+    </form></div>
+    <div id="rule"><span style="color: red;"> Rules for Chess:-</span> <br><br>
+        1. Each and every player would be provided with 5 mins each. <br>
+        2. The clock would be placed at the left hand side of the white king. <br>
+        3. When the match is going on, a person can use only 1 hand to move his pieces and click on the clock. If a player is found using 2 hands by the volunteers, the player would lose 2 seconds on his clock. <br>
+        4. 3 fouls leads to loosing the match by the player. <br>
+        5. The opponent should call the volunteers as soon as a player plays a foul move. <br>
+        6. Each win would be awarded 2 points each. <br>
+        7. In case the timer stops for one player, the opponent wins the match. <br>
+        8. In case of a stalemate, each player would be awarded 1 point each. <br>
+        9. Any case of unnecessary arguments with the players and the volunteers would result in a loss of 2 points. <br>
+        10. The match wont be a knockout match. <br>
+        11. The player with the highest number of points would be qualified for finals. <br>
+        12. Top 2 players would receive a cash prize. <br>
+        13. Last minute entries would not be entertained. <br><br>
+    <input type="checkbox" name="check" id="ch" onclick="ok()">I agree to all the above mentioned rules</div>
+
+    
+    </div>
+   
+    <script>
+    
+        home = () => {
+
+            window.open("index.html");
+        }
+
+        ok = () => {
+            var today = new Date();
+            var now = today.toLocaleString();
+            let a = document.getElementById("rule");
+            a.style.visibility = "hidden";
+            document.getElementById("time").defaultValue = now;
+            
+        }
+    
+    </script>
+</body>
+</html>

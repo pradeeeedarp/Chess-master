@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="VTU chess tournament">
+    <meta name="keywords" content="vtu, vtu activities, vtu btech, btech">
+    <meta name="robots" content="INDEX, FOLLOW">
+    <title>Chess Master</title>
+    <style>
+        /* body{
+            background-image: url("chess1.png");
+            background-repeat: no-repeat;
+        } */
+        .c{
+            height: 100vh;
+            width: 100vw;
+            position: absolute;
+        }
+        .c img{
+            height: 100vh;
+            width: 100vw;
+        }
+        .mask{
+            height: 100vh;
+            width: 0vw;
+            background-color: black;
+            
+            float: left;
+            position: absolute;
+            opacity: 0.7;
+            animation: mask1 1s forwards 0s 1;
+            
+           color: white;
+        }
+
+        ul li{
+            list-style-type: none;
+            font-size: calc(2vh + 2vw);
+            padding: calc(2vh + 2vw);
+            animation: mask3 3s forwards 0s 1;
+        }
+
+        @keyframes mask3 {
+            0%{
+                list-style-type: none;
+            }
+            100%{
+                list-style-type: disc;
+            }
+        }
+
+        @keyframes mask2 {
+            0%{
+                opacity: 0;
+            }
+            100%{
+                opacity: 1;
+                
+            }
+        }
+
+        ul li a{
+            text-decoration: none;
+            color: white;
+            opacity: 0;
+            animation: mask2 2s forwards 1s 1;
+        }
+
+
+        @keyframes mask1 {
+            0%{
+                width: 10vw;
+                display: block;
+            }
+          
+            100%{
+                width: 50vw;
+                display: block;
+                
+            }
+        }
+        .dev{
+            width: 70vw;
+            height: 60vh;
+            background-color: black;
+            margin: 20vh 10vw 20vh 15vw;
+            position: absolute;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            visibility: hidden;
+        }
+        .dev img{
+            height: calc(10vh + 10vw);
+            width: calc(10vh + 10vw);
+            border-radius: 50% 50%;
+            margin: auto;
+            padding: 10px;
+        }
+        #but{
+            color: white;
+            position: absolute;
+            margin: 95vh 45vw 0vh 45vw;
+            text-align: center;
+            width: calc(4vh + 4vw);
+            border: 2px solid blue;
+            padding: 1vw;
+            border-radius: 12px;
+            background-color: black;
+            visibility: hidden;
+            z-index: 1;
+        }
+
+        @media  screen and (max-width: 600px) {
+    .dev{
+        display: block;
+    }
+    .dev img{
+        display: block;
+    }
+}
+    </style>
+</head>
+<body>
+<div class="c"><img src="chess1.png" alt="chess">
+</div>
+<div class="mask">
+    <ul><li id="al"><a href="#">Points table</a></li>
+    <li><a href="enter.html" target="_blank">Enter</a></li>
+<li><a href="#"  onclick="dev()">Developers</a></li></ul>
+</div>
+<div class="dev" id="dev"> 
+    <img src="fresh1.jpg" alt="">
+    <img src="aaryan.jpg" alt="">
+    
+</div><div id="but" onclick="clo()">Back</div>
+   <script>
+    let a= document.getElementById("al");
+    al.onclick=function (){
+        alert("Event not yet started!!!")
+    }
+
+    dev = () =>{
+        var b=document.getElementById("but");
+        var c=document.getElementById("dev");
+        b.style.visibility = "visible";
+        c.style.visibility = "visible";
+    }
+
+    clo = () =>{
+        var b=document.getElementById("but");
+        var c=document.getElementById("dev");
+        b.style.visibility = "hidden";
+        c.style.visibility = "hidden";
+    }
+   </script> 
+</body>
+</html>
